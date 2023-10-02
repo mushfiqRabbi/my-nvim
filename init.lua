@@ -21,18 +21,16 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 
 require("lazy").setup(
   {
-    "phaazon/hop.nvim",
+    "ggandor/leap.nvim",
+    dependencies = { "tpope/vim-repeat" },
     config = function()
-      require('hop').setup()
-      local hop = require('hop')
-      vim.keymap.set('n', 's', function()
-        hop.hint_char1()
-      end, { remap = true })
+      require('leap').add_default_mappings()
     end
   }
 )
