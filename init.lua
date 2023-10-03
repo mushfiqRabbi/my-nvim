@@ -4,6 +4,10 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
+vim.keymap.set('n', '<C-h>', ':lua require("vscode-neovim").call("workbench.action.previousEditorInGroup")<CR>',
+  { noremap = true })
+vim.keymap.set('n', '<C-l>', ':lua require("vscode-neovim").call("workbench.action.nextEditorInGroup")<CR>',
+  { noremap = true })
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true, silent = true })
 
