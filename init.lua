@@ -4,7 +4,8 @@ vim.o.clipboard = 'unnamedplus'
 
 
 
--- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
+vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true, silent = true })
 -- vim.keymap.set('n', '<S-l>', ':lua require("vscode-neovim").call("workbench.action.nextEditor")<CR>',
 --   { noremap = true, silent = true })
 -- vim.keymap.set('n', '<S-h>', ':lua require("vscode-neovim").call("workbench.action.previousEditor")<CR>',
