@@ -1,15 +1,11 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.o.clipboard = 'unnamedplus'
-
-
+vim.o.ignorecase = true
+vim.o.smartcase = true
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true, silent = true })
--- vim.keymap.set('n', '<S-l>', ':lua require("vscode-neovim").call("workbench.action.nextEditor")<CR>',
---   { noremap = true, silent = true })
--- vim.keymap.set('n', '<S-h>', ':lua require("vscode-neovim").call("workbench.action.previousEditor")<CR>',
---   { noremap = true })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -24,7 +20,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 vim.opt.rtp:prepend(lazypath)
-
 
 require("lazy").setup(
   {
