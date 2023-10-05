@@ -5,17 +5,10 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
--- vim.keymap.set({ 'n', 'x' }, '<C-h>', ':lua require("vscode-neovim").call("workbench.action.previousEditorInGroup")<CR>',
---   { noremap = true })
--- vim.keymap.set({ 'n', 'x' }, '<C-l>', ':lua require("vscode-neovim").call("workbench.action.nextEditorInGroup")<CR>',
---   { noremap = true })
 vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true })
 vim.keymap.set('n', '<C-p>',
   '<Cmd>call VSCodeNotify("workbench.action.togglePanel")<CR><Cmd>call VSCodeNotify("workbench.action.focusActiveEditorGroup")<CR>',
   { noremap = true })
--- vim.keymap.set('n', '<C-k>',
---   ':lua require("vscode-neovim").call("workbench.action.toggleSidebarVisibility")<CR>',
---   { noremap = true })
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
