@@ -10,8 +10,8 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 -- vim.keymap.set({ 'n', 'x' }, '<C-l>', ':lua require("vscode-neovim").call("workbench.action.nextEditorInGroup")<CR>',
 --   { noremap = true })
 vim.keymap.set('n', '<C-q>', '<C-v>', { noremap = true })
-vim.keymap.set('n', '<C-j>',
-  ':lua require("vscode-neovim").call("workbench.action.togglePanel")<CR>:lua require("vscode-neovim").call("workbench.action.focusActiveEditorGroup")<CR>',
+vim.keymap.set('n', '<C-p>',
+  '<Cmd>call VSCodeNotify("workbench.action.togglePanel")<CR><Cmd>call VSCodeNotify("workbench.action.focusActiveEditorGroup")<CR>',
   { noremap = true })
 -- vim.keymap.set('n', '<C-k>',
 --   ':lua require("vscode-neovim").call("workbench.action.toggleSidebarVisibility")<CR>',
